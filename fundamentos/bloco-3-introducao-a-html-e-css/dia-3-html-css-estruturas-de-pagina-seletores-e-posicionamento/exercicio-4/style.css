@@ -1,0 +1,31 @@
+div:hover {
+    margin: auto;
+   border-style: solid;
+}
+/* Usar o nth-of-type(x) para ele puxar a dev irmã referente a sua posição selecionada no lugar de x, por exemplo o numero 1 irá puxar a primeira dev, o 2 a segunda e assim sucessivamente. */
+div:nth-of-type(1){
+    text-decoration: underline;
+    background-color: red;
+    font-style: italic;
+}
+div:nth-of-type(2) {
+    color: cyan;
+   
+    background-color: green;
+}
+div:nth-of-type(3) {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    background-color: blue;
+    font-style: italic;
+}
+div:nth-of-type(4) {
+    text-align: center;
+    background-color: brown;
+}
+div:nth-of-type(5) {
+    text-transform: uppercase;
+    background-color: cyan;
+    font-style: italic;
+}
+
