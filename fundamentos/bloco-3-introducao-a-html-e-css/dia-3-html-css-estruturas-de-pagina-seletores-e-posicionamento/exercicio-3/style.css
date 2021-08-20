@@ -1,0 +1,15 @@
+h1, p {
+    text-align: center;
+}
+.lista-ordenada {
+
+}
+li:hover {
+    background-color: rgb(96, 235, 223);
+}
+li:active {
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul, ol{
+    list-style: none;
+}
