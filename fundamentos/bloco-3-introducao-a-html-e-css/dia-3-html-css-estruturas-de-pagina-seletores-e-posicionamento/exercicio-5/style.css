@@ -1,0 +1,52 @@
+
+.lista-ordenada {
+background-color: yellow;
+}
+.par {
+    color: green;
+
+}
+.impar {
+text-transform: uppercase;
+}
+
+h1, h2, h3, h4 {
+    color: red;
+}
+h1 em, h2 em, h3 em, h4 em {
+    font-size: 40px;
+   border: 1px solid black;
+}
+li {
+    font-size: 20px;
+}
+li em {
+    font-weight: bold;
+}
+.tres-primeiras {
+    color: blue;
+}
+.java {
+    background-color: pink;
+}
+
+li:hover a.stackoverflow {
+    font-weight: bold;
+    color: orange;
+}
+li:hover a.schools {
+    font-weight: bold;
+    color: green;
+}
+li:hover a.mdn {
+    font-weight: bold;
+    color: black;
+}
+li:hover a.devdocs {
+    font-weight: bold;
+    color: yellow;
+}
+li:hover a.trybe {
+    font-weight: bold;
+    color: green
+}
