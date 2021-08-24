@@ -1,0 +1,105 @@
+* {
+    background-color: beige;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    margin: 0;
+}
+h1 {
+    margin: 10px;
+    font-size: 45px;
+    color: black;
+}
+.texto-alinhado {
+    
+text-align: center;
+}
+.linhareta {
+    display: inline;
+    margin-right: 30px;
+}
+
+.header { 
+    margin: 10px;
+
+}
+
+.nav {
+    margin: 20px;
+}
+.article1 {
+text-align: left;
+    display: inline-block;
+    width: 800px;
+    margin: 10px;
+ 
+   
+}
+#pagina-inicial {
+    margin-left: 200px;
+
+}
+
+.table1 td{
+    width: 300px;
+    background-color: darkgray;
+    border: 1px solid black;
+}
+.table1{
+    width: 300px;
+    background-color: darkgray;
+    border: 1px solid black;
+}
+.image1 {
+    display: inline-block;
+    width: 300px;
+ text-align: right;
+ border: 1px solid black;
+ 
+    }
+    .ref {
+        margin: 10px;
+    }
+.imagem2 {
+    width: 300px;
+    border: 1px solid black;
+    margin-left: 200px;
+    text-align: center;
+   
+}
+#sobre {
+    max-width: 700px;
+    display: inline-block;
+    clear: left;
+}
+.lista2 {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+}
+.fato-super {
+    display: inline-block;
+    top: 300px;
+    float: right;
+    height: 730px;
+    width: 300px;
+    background-color: darkgray;
+    border: 1px solid black;
+    text-align: center;
+      
+}
+.margem {
+    margin-right: 50px;
+}
+.colorfato {
+    background-color: darkgray;
+}
+.referencias {
+    margin: 10px;
+margin-left: 200px;
+width: 300px;
+
+}
+.footer {
+    text-align: center;
+    margin: 10px;
+}
