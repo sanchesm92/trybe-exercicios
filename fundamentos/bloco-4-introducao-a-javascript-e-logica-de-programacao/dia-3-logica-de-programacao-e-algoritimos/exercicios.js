@@ -58,6 +58,21 @@
 //       linha = linha + " ";
 //     }
 
+// let n = 5;
+// let linha = "";
+// let meio = (n + 1)/ 2;
+// let controlLeft = meio;
+// let controlRight = meio;
+
+// // primeira linha 
+// for (let indiceLinha = 0; indiceLinha <= meio; indiceLinha += 1){
+//   for (let indiceColuna = 0; indiceColuna <= n; indiceColuna += 1){
+//     if ( (indiceColuna > controlLeft) && (indiceColuna < controlRight) ) {
+//       linha = linha + "*"; // está pintando o meio pq se for maior que o da esquerda e maior que o da direita, está no meio
+//     } else {
+//       linha = linha + " ";
+//     }
+
 //   }
 //   console.log(linha);
 //   linha = "";
@@ -65,7 +80,6 @@
 //   controlRight += 1;
 
 // }
-
 
 // exercicio bonus 1
 
@@ -94,17 +108,46 @@
 // }
 // console.log(line);
 
-let n = 7;
-let quantidade = 0;
+// let n = 7;
+// let quantidade = 0;
 
-for (let i = 2; i < n; i += 1){
-  if ( n % i === 0) {
-    quantidade += 1;
+// for (let i = 2; i < n; i += 1){
+//   if ( n % i === 0) {
+//     quantidade += 1;
+//   }
+// }
+// if ( quantidade === 0){
+//   console.log("é Um numero primo");
+// } else {
+//   console.log("Não é um numero primo");
+// }
+
+// ________________________________________
+
+
+let n = 9;
+let line = "";
+let middle = (n + 1) / 2;
+let left = middle;
+let right = middle;
+
+
+for ( i = 0; i <= middle; i += 1){
+  for ( i2 = 0; i2 <= n + 1; i2 += 1){
+    if ((i2 === left) || (i2 === right) || (line === i2)){
+      line = line + "*";
+    } else {
+      line = line + " ";
+    }
   }
+  
+  console.log(line);
+  left -= 1;
+  right += 1;
+  line = "";
 }
-if ( quantidade === 0){
-  console.log("é Um numero primo");
-} else {
-  console.log("Não é um numero primo");
+line = "";
+for (i = 0; i < n + 2; i += 1){
+  line = line + "*";
 }
-
+console.log(line);
