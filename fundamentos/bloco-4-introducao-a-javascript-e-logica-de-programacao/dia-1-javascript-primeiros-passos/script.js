@@ -4,6 +4,11 @@
 // var birthYear = 1992;
 // birthYear = 2030
 // console.log(myName,birthCity,birthYear)
+// refatorando
+// function player (name, birthCity, birthYear){
+//   console.log(name, birthCity, birthCity);
+// }
+// player('Felipe', 'Conselheiro Lafaiete', 1992)
 
 // exercicio 2
 // const base = 5;
@@ -12,6 +17,11 @@
 // const area = (base*height);
 // const perimeter = (base+base+height+height);
 // console.log(perimeter);
+// refatorando
+// function area (base, height){
+//   console.log('A área é ' + (base*height));
+// }
+// area (5,8);
 
 // Exercicio 3
 // const nota = 55;
@@ -25,6 +35,19 @@
 // else if (nota < 60) {
 //   console.log("Você foi reprovada(o)")
 // }
+// refatorando
+// function aprovacao(nota){
+// if (nota >= 80) {
+//   console.log("Parabéns, você foi aprovada(o)!")
+// }
+// else if (nota >= 60 && nota < 80) {
+//   console.log("Você está na nossa lista de espera")
+// }
+// else if (nota < 60) {
+//   console.log("Você foi reprovada(o)")
+// }
+// }
+// aprovacao(85);
 
 // exercicio 4
 // console.log("trybe")
@@ -239,41 +262,44 @@
 //   console.log("O lucro é de: " + lucro + " reais");  
 // }
 // exercicio 11
-let salarioBruto = 3000.00;
-let salarioLiquido = null;
-let aliquotaInss = null;
-let aliquotaIr = null;
-let impostoRenda = null;
-let salarioIr = null;
-
-if (salarioBruto < 1556.94){
-  aliquotaInss = ((salarioBruto * 8)/100);
-} else if (salarioBruto > 1556.95 && salarioBruto < 2594.92){
-  aliquotaInss= ((salarioBruto * 9)/100);
-} else if (salarioBruto > 2594.93 && salarioBruto < 5189.82){
-  aliquotaInss = ((salarioBruto * 11)/100);
-} else if (salarioBruto > 5189.82){
-  aliquotaInss = 570.88
+// let salarioBruto = 3000.00;
+function salario(salarioBruto){
+  let salarioLiquido = null;
+  let aliquotaInss = null;
+  let aliquotaIr = null;
+  let impostoRenda = null;
+  let salarioIr = null;
+  
+  if (salarioBruto < 1556.94){
+    aliquotaInss = ((salarioBruto * 8)/100);
+  } else if (salarioBruto > 1556.95 && salarioBruto < 2594.92){
+    aliquotaInss= ((salarioBruto * 9)/100);
+  } else if (salarioBruto > 2594.93 && salarioBruto < 5189.82){
+    aliquotaInss = ((salarioBruto * 11)/100);
+  } else if (salarioBruto > 5189.82){
+    aliquotaInss = 570.88
+  }
+  salarioIr = salarioBruto - aliquotaInss;
+  
+  if (salarioIr <= 1903.98) {
+  impostoRenda = "isento";
+  aliquotaIr = 0;
+  } else if (salarioIr >= 1903.99 && salarioIr <= 2826.65) {
+    aliquotaIr = 7.5;
+  impostoRenda = (((salarioIr * 7.5)/100) - 142.80);
+  } else if (salarioIr >= 2826.66 && salarioIr <= 3751.05) {
+    aliquotaIr = 15;
+  impostoRenda = (((salarioIr * 15)/100) - 354.80);
+  } else if (salarioIr >= 3751.06 && salarioIr <= 4664.68) {
+    aliquotaIr = 22.5;
+  impostoRenda = (((salarioIr * 22.5)/100) - 636.13);
+  } else if (salarioIr > 4664.68 ){
+    aliquotaIr = 27.5;
+  impostoRenda = (((salarioIr * 27.5)/100) - 869.36);
+  }
+  
+  salarioLiquido = salarioIr - impostoRenda
+  
+  console.log(salarioLiquido);
 }
-salarioIr = salarioBruto - aliquotaInss;
-
-if (salarioIr <= 1903.98) {
-impostoRenda = "isento";
-aliquotaIr = 0;
-} else if (salarioIr >= 1903.99 && salarioIr <= 2826.65) {
-  aliquotaIr = 7.5;
-impostoRenda = (((salarioIr * 7.5)/100) - 142.80);
-} else if (salarioIr >= 2826.66 && salarioIr <= 3751.05) {
-  aliquotaIr = 15;
-impostoRenda = (((salarioIr * 15)/100) - 354.80);
-} else if (salarioIr >= 3751.06 && salarioIr <= 4664.68) {
-  aliquotaIr = 22.5;
-impostoRenda = (((salarioIr * 22.5)/100) - 636.13);
-} else if (salarioIr > 4664.68 ){
-  aliquotaIr = 27.5;
-impostoRenda = (((salarioIr * 27.5)/100) - 869.36);
-}
-
-salarioLiquido = salarioIr - impostoRenda
-
-console.log(salarioLiquido);
+salario(3000.00)
