@@ -1,0 +1,259 @@
+<!-- <main id="paiDoPai">
+  <section id="pai">
+    <section id="primeiroFilho"></section>
+    <section id="elementoOndeVoceEsta">
+      <section id="primeiroFilhoDoFilho"></section>
+      <section id="segundoEUltimoFilhoDoFilho"></section>
+    </section>
+    Atenção!
+    <section id="terceiroFilho"></section>
+    <section id="quartoEUltimoFilho"></section>
+  </section>
+  <script>
+    //     Acesse o elemento elementoOndeVoceEsta .
+    let elemento = document.getElementById('elementoOndeVoceEsta');
+// Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+elemento.parentElement.style.backgroundColor = 'red'
+'red';
+// Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+let filhote = document.getElementById('primeiroFilhoDoFilho');
+filhote.innerText = 'Bom dia'
+// Acesse o primeiroFilho a partir de pai .
+let dad = document.getElementById('pai');
+dad.firstElementChild;
+// Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+elemento.previousElementSibling;
+// Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+elemento.nextSibling;
+// Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta .
+elemento.nextElementSibling;
+// Agora acesse o terceiroFilho a partir de pai .
+dad.firstElementChild.nextElementSibling.nextElementSibling;
+
+// Crie um irmão para elementoOndeVoceEsta .
+let criarIrmao = document.createElement('section');
+dad.appendChild(criarIrmao);
+// Crie um filho para elementoOndeVoceEsta .
+let criarDiv = document.createElement('div');
+elemento.appendChild(criarDiv);
+// Crie um filho para primeiroFilhoDoFilho .
+let firstFilho = elemento.previousElementSibling;
+firstFilho.appendChild(criarDiv);
+// A partir desse filho criado, acesse terceiroFilho 
+let filhoCriado = firstFilho.firstElementChild;
+filhoCriado.parentElement.nextElementSibling.nextElementSibling;
+// Remova todos os elementos filhos de paiDoPai exceto pai , 
+
+// elementoOndeVoceEsta e 
+
+// primeiroFilhoDoFilho .
+let remove1 = filhote.nextElementSibling;
+let thirdFilho = elemento.nextElementSibling;
+let quarterFilho = dad.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling;
+let filho1element = dad.firstElementChild;
+dad.removeChild(filho1element);
+dad.removeChild(thirdFilho);
+dad.removeChild(quarterFilho);
+elemento.removeChild(remove1);
+  </script>
+</main> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      function criasecao (n){
+        let criasecao = document.createElement(n);
+        return criasecao;
+      }
+      function criali (n){
+        let criali = document.createElement(n);
+        return criali;
+      }
+      function criah3 (n){
+        let criah3 = document.createElement('h3');
+        return criah3;
+      }
+// 1 Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
+let corpo = document.body;
+let criaH1 = document.createElement('h1');
+criaH1.innerText = 'Exercício 5.2 - Javascript DOM'
+corpo.appendChild(criaH1);
+
+// 2 Adicione a tag main com a classe main-content como filho da tag body ;
+let criaMain = document.createElement('main');
+criaMain.className = 'main-content';
+corpo.appendChild(criaMain);
+
+// 3 Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+let mainContent = document.querySelector('.main-content');
+let passo3 = criasecao('section');
+passo3.className = 'center-content';
+mainContent.appendChild(passo3);
+
+
+// 4 Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+let criaP = document.createElement('p');
+criaP.innerText = 'Algum Texto';
+mainContent.firstChild.appendChild(criaP);
+
+
+
+// 5 Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+let passo5 = criasecao('section');
+passo5.className = 'left-content';
+mainContent.appendChild(passo5);
+
+
+// 6 Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+let passo6 = criasecao('section');
+passo6.className = 'right-content';
+mainContent.appendChild(passo6);
+
+// 7 Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do section criado no passo 5;
+let passo7 = document.querySelector('.left-content');
+let criaImagem = document.createElement('img');
+criaImagem.className = 'small-image';
+criaImagem.src = 'https://picsum.photos/200';
+passo7.appendChild(criaImagem);
+
+
+
+// 8 Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um , dois , três , ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+let passo8 = document.querySelector('.right-content');
+let listaNaoOrdenada = document.createElement('ul');
+passo8.appendChild(listaNaoOrdenada);
+let liPasso8 = passo8.firstChild;
+for (let i = 1; i <= 10; i += 1){
+  let criacao = criali('li')
+  criacao.innerText = i;
+  switch(i){
+    case 1:
+      criacao.innerText = 'um';
+      break;
+    case 2:
+      criacao.innerText = 'dois';
+      break;
+    case 3:
+      criacao.innerText = 'tres';
+      break;
+    case 4:
+    criacao.innerText = 'quatro';
+    break;
+    case 5:
+      criacao.innerText = 'cinco';
+      break;
+    case 6:
+      criacao.innerText = 'seis';    
+      break;
+    case 7:
+      criacao.innerText = 'sete';     
+      break;
+    case 8:
+      criacao.innerText = 'oito';    
+      break;
+    case 9:
+      criacao.innerText = 'nove';
+      break;
+    case 10:
+      criacao.innerText = 'dez';
+      break;
+  }
+  liPasso8.appendChild(criacao);
+
+}
+
+// 9 Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
+for (let i = 0; i < 3; i += 1){
+  let passo9 = criah3('h3');
+  mainContent.appendChild(passo9);
+}
+
+// 10 Adicione a classe title na tag h1 criada;
+let passo10 = document.body.firstElementChild.nextElementSibling;
+passo10.className = 'title';
+
+// 11 Adicione a classe description nas 3 tags h3 criadas;
+let passo11 = passo8.nextElementSibling;
+passo11.className = 'description';
+passo11.nextElementSibling.className = 'description';
+let passo111 = passo11.nextElementSibling;
+passo111.nextElementSibling.className = 'description';
+
+// 12  Remova a section criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() ;
+let filhoremove = document.querySelector('.left-content');
+mainContent.removeChild(filhoremove);
+
+
+// 13 Centralize a section criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto da section ;
+let passo13 = document.querySelector('.right-content');
+passo13.style.marginRight = 'auto';
+
+// 14 Troque a cor de fundo do elemento pai da section criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+let passo14 = document.querySelector('.center-content').parentElement;
+passo14.style.backgroundColor = 'cyan';
+
+// 15 Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+let passo15 = document.querySelector('.right-content').firstElementChild;
+let passo151 = passo15.lastElementChild;
+let passo152 = passo151.previousElementSibling;
+passo15.removeChild(passo151);
+passo15.removeChild(passo152);
+
+    </script>
+  </body>
+</html>
