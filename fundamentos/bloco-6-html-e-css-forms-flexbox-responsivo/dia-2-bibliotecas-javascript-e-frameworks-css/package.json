@@ -1,0 +1,16 @@
+{
+  "name": "dia-2-bibliotecas-javascript-e-frameworks-css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-3.6.0.min.js",
+  "dependencies": {
+    "just-validate": "^1.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

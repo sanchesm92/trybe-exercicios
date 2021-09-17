@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+
+
+
+    <title>Forms</title>
+ </head>
+ <body>
+   <header>
+     <h1 class="display-1 text-center">Formulário</h1>
+   </header>
+   <form action="#" method="GET" id="form">
+
+     <fieldset>
+        <p class="lead text-center">Informações</p>
+        <div class="mb-3">
+         <label class="form-label" for="input-name">Nome </label>
+         <input class="form-control" type="text" name="nome" id="input-name" maxlength="40" placeholder="Digite seu nome" required data-validate-field="name">
+        </div>
+        <div class="mb-3">
+         <label class="form-label" for="input-cpf">CPF  </label>
+         <input class="form-control" type="text" name="cpf" id="input-cpf" maxlength="11" placeholder="Digite seu cpf" required data-validate-field="cpf">
+        </div>
+        <div class="mb-3">
+         <label class="form-label" for="input-email">Email </label>
+         <input class="form-control" type="text" name="email" id="input-email" maxlength="50" placeholder="Digite seu email" required data-validate-field="email">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="input-address">Endereço  </label>
+          <input class="form-control" type="text" name="address" id="input-address" maxlength="200" placeholder="Digite seu endereço" required data-validate-field="address">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="input-city">Cidade </label>
+          <input class="form-control" type="text" name="city" id="input-city" maxlength="28" placeholder="Digite sua cidade" required data-validate-field="city"> 
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="states">Estado </label>
+          <select class="form-select" name="estados" id="states" required required data-validate-field="states"></select>
+        </div>
+     </fieldset>
+     <fieldset>
+       <div class="mx-auto">
+         <p class="lead">home</p>
+           <div class="form-check">
+             <label class="form-check-label" for="input-house">Casa </label>
+             <input type="radio" name="home" id="input-house" required checked data-validate-field="home" class="form-check-input">
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="input-apart">Apartamento</label>
+              <input class="form-check-input" type="radio" name="home" id="input-apart" required data-validate-field="home">
+            </div>
+       </div>
+    </fieldset >
+     <fieldset>
+       <h3 class="text-center display-6">Last Job</h3>
+      <div class="mb-3">
+        <label class="form-label" for="resume"> Resumo </label>
+        <textarea class="form-control" name="resume" id="resume" cols="70" rows="5" maxlength="1000" placeholder="Escreva um resumo sobre você" data-validate-field="resume"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="input-cargo">Cargo: </label>
+          <input class="form-control" type="text" name="cargo" id="input-cargo" required placeholder="Digite se Cargo" maxlength="40" data-validate-field="cargo">
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="description">Description</label>
+          <textarea class="form-control" name="description" id="description" cols="70" rows="5" maxlength="500" placeholder="Escreva um breve resumo de suas funções no ultimo" data-validate-field="description"></textarea>
+        </div>
+        <div class="mb-3">
+          <label class="form-label" for="">Data de Inicio</label>
+          <input type="text" class="form-control" name="initial-date" id="date" min='1899-01-01' max='2022-13-13' data-validate-field="date">
+        </div>
+     </fieldset>
+     <div class="mb-3 text-center">
+       <button type="reset" id="clear">Limpar</button>
+       <button type="submit" id="submit">Enviar</button>
+     </div>
+   </form>
+
+  <script src="script.js" type="module"></script>
+  <script src="jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+  <script src="moment.js"></script>
+ </body>
+ </html>
