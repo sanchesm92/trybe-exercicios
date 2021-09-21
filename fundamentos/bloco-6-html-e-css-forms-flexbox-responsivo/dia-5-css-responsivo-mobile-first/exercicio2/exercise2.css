@@ -83,7 +83,7 @@ header nav {
 footer {
   text-align: center;
   background-color: turquoise;
-  padding: 10px;
+  padding: 5px;
 }
 
 footer p {
@@ -102,10 +102,100 @@ footer p {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
+   header {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-between;
+     margin: 0;
+    }
+  header p {
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    flex-basis: 60% ;
+    }
+    header ul li {
+      font-size: medium;
+    }
+    header ul {
+      display: flex;
+      width: 200px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .aside-one ul li {
+    font-size: 15px;
+    }
+    .aside-one h2 {
+      font-size: 20px;
+      }
+    .aside-two ul li {
+      font-size: 15px;
+      }
+    .aside-two h2 {
+      font-size: 20px;
+      }
+    .main-content h1 {
+      font-size: 20px;
+    }
+    .main-content p {
+      font-size: 15px;
+    }
+    footer p {
+      font-size: 10px;
+    }
+    footer h3 {
+      font-size: 15px;
+    }
 
-  
 }
-@media screen and (max-width: 1000px) {
-  
+@media screen and (max-width: 1000px) and (min-width: 501px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+   }
+ header p {
+   font-size: 40px;
+   text-align: center;
+   display: flex;
+   flex-basis: 60% ;
+   }
+   header ul li {
+     font-size: 25px;
+   }
+   header ul {
+     display: flex;
+     width: 500px;
+     justify-content: space-between;
+     align-items: center;
+   }
+   .aside-one ul li {
+   font-size: 25px;
+   }
+   .aside-one h2 {
+     font-size: 35px;
+     }
+   .aside-two ul li {
+     font-size: 25px;
+     }
+   .aside-two h2 {
+     font-size: 35px;
+     }
+   .main-content h1 {
+     font-size: 35px;
+   }
+   .main-content p {
+     font-size: 25px;
+   }
+   footer p {
+     font-size: 20px;
+   }
+   footer h3 {
+     font-size: 20px;
+   }
 }
