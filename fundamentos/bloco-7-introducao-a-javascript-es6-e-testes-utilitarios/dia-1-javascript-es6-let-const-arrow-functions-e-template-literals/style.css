@@ -1,0 +1,7 @@
+button {
+  padding: 10px;
+}
+button:hover {
+  background-color: black ;
+  color: greenyellow;
+}
