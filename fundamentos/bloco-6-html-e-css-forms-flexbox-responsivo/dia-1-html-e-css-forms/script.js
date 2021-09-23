@@ -38,13 +38,9 @@ const getSubmit = document.querySelector('#submit');
 
 getSubmit.addEventListener('click', function (event) {
 event.preventDefault();
-let nome = document.querySelector('[name = nome');
-let cpf = document.querySelector('[name = cpf');
-let email = document.querySelector('[name = email');
-let address = document.querySelector('[name = address');
-let city = document.querySelector('[name = city');
-let resume = document.querySelector('[name = resume');
-let cargo = document.querySelector('[name = cargo');
+let nome = document.querySelector(input).value;
+let cpf = document.querySelector(input).value;
+
 
 let description = document.querySelector('[name = description');
 let date = document.querySelector('[name = date');
