@@ -62,16 +62,15 @@
 // button.addEventListener('click', contador);
 
 // exercicio 4
-
-const subst = (string, param) => {
-  const arrayString = string.split(' ');
-  const arrayVazio = [];
-  for (let i of arrayString) {
-    if (i === 'x') {
-      i = param;
-    }
-    arrayVazio.push(i);
+function funcao (){
+  const array = ['HTML', 'CSS', 'Javascript', 'DOM', 'React'];
+  const subst = (name) => `Tryber ${name} aqui!`;
+  subst();
+  const paraString = () => {
+    const arrayOrder = array.sort();
+    let string = arrayOrder.join(', ');
+    return string
   }
-  return console.log(arrayVazio.join(' '));
+console.log(`Resultado:${subst('Felipe')} e ${paraString()}`);
 }
-subst ('Tryber x aqui!', 'Bebeto');
+funcao();
