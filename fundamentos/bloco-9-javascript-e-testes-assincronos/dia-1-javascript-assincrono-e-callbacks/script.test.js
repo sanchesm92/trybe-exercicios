@@ -57,8 +57,6 @@
 //   })
 // })
 // Verifique se a importação do arquivo correto está sendo feita.
-const { expect } = require("@jest/globals");
-const exp = require("constants");
 const { getPokemonDetails } = require("./script.js");
 
 describe("A função getPokemonDetails", () => {
